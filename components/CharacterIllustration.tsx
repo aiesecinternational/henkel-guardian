@@ -16,7 +16,7 @@ export function CharacterIllustration({ currentLevelData }: CharacterIllustratio
         <div className="absolute inset-0 bg-gradient-to-br from-amber-400/15 via-purple-500/8 to-blue-500/15 rounded-full blur-2xl sm:blur-3xl scale-125 sm:scale-150 opacity-50 sm:opacity-60 animate-pulse"></div>
         
         {/* Character image with enhanced styling */}
-        <div className="relative mb-4 sm:mb-6 group">
+        <div className="relative mb-4 sm:mb-6 group pt-8">
           <div className="absolute inset-0 bg-gradient-to-br from-amber-300/20 to-purple-400/20 sm:from-amber-300/30 sm:to-purple-400/30 rounded-full blur-lg sm:blur-xl group-hover:blur-2xl transition-all duration-500"></div>
           <div className="relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 rounded-full p-2 sm:p-3 md:p-4 border border-slate-600/40 sm:border-2 sm:border-amber-400/50 backdrop-blur-sm shadow-xl sm:shadow-2xl">
             <Image
@@ -31,7 +31,7 @@ export function CharacterIllustration({ currentLevelData }: CharacterIllustratio
         </div>
 
         {/* Enhanced info card - mobile optimized */}
-        <div className="relative w-full max-w-xs sm:max-w-sm mx-auto">
+        <div className="relative w-full max-w-xs sm:max-w-sm mx-auto pb-6">
           {/* Card glow effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-amber-400/15 via-purple-500/15 to-blue-500/15 sm:from-amber-400/20 sm:via-purple-500/20 sm:to-blue-500/20 rounded-lg sm:rounded-xl blur-md sm:blur-lg"></div>
           
@@ -46,9 +46,6 @@ export function CharacterIllustration({ currentLevelData }: CharacterIllustratio
               <h3 className="text-white font-bold text-base sm:text-lg md:text-xl bg-gradient-to-r from-amber-200 to-yellow-200 bg-clip-text text-transparent leading-tight">
                 {currentLevelData.topic}
               </h3>
-              <p className="text-slate-300 text-xs sm:text-sm md:text-base leading-relaxed">
-                {currentLevelData.description}
-              </p>
             </div>
             
             {/* Subtle inner glow */}
