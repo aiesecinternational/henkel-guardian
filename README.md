@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛡️ Henkel Guardian
 
-## Getting Started
+A gamified Next.js app where users must outsmart an AI guardian to uncover a hidden Henkel-related secret. The challenge consists of 5 progressive levels, each requiring users to formulate smarter queries to reveal the answer. Successfully completing all 5 levels records user data in a connected Google Sheet.
 
-First, run the development server:
+## 🧩 Features
+
+* Gemini API-powered AI Guardian that responds to user queries
+* 5-level challenge system with increasing difficulty
+* Google Sheets integration to store user data upon completion
+* Data captured: `firstname`, `lastname`, `country`, `email`, `created_at`
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+* Node.js (>=16) and npm or yarn installed
+* A Google Sheet created with columns:
+  `firstname | lastname | country | email | created_at`
+  and its **Sheet ID**
+
+### 1. Clone this repo
+
+```bash
+git clone https://github.com/Dulithi/henkel-guardian.git
+cd henkel-guardian
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Set up environment variables
+
+Create a `.env.local` file in the project root:
+
+```env
+GEMINI_API_KEY="your Gemini API key"
+NEXT_PUBLIC_GOOGLE_SHEET_ID="your Google Sheet ID"
+```
+
+* `GEMINI_API_KEY`: API key to communicate with Gemini AI
+* `NEXT_PUBLIC_GOOGLE_SHEET_ID`: ID of the Google Sheet; must have columns: `firstname`, `lastname`, `country`, `email`, `created_at`
+
+### 4. Run locally
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to start the challenge.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧠 Game Flow
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. User answers a Henkel-related riddle or question by trying to trick the Guardian.
+2. If the response meets the level criteria, they move to the next.
+3. Each level is progressively harder and tests creativity and knowledge.
+4. Upon completing Level 5, the user's info is submitted to a Google Sheet.
 
-## Learn More
+## ⚙️ Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+| Variable                      | Description                                   |
+| ----------------------------- | --------------------------------------------- |
+| `GEMINI_API_KEY`              | API key for Gemini AI                         |
+| `NEXT_PUBLIC_GOOGLE_SHEET_ID` | Google Sheet ID used to store completion data |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy to Vercel, Netlify, or any platform supporting Next.js. Ensure environment variables are properly set.

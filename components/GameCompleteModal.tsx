@@ -48,12 +48,7 @@ export function GameCompletedModal({ open, onOpenChange}: GameCompletedModalProp
 
   const submitToGoogleSheets = async (data: UserData) => {
     // Replace with your Google Apps Script Web App URL
-    const GOOGLE_SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL
-
-    if (!GOOGLE_SCRIPT_URL) {
-      console.error('Google Script URL is not defined.')
-      return false
-    }
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyMzbPw8SZrqocFd8qXvtV8c2f4qEQMRPdZeUrLoukJ6sWSkDlGmxaVZLkoSBE7WLut/exec'
     
     const payload = {
       ...data,
