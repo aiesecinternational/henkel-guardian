@@ -8,7 +8,7 @@ import { levels } from "@/data/levels";
 import { useGame } from "@/hooks/useGame";
 
 export default function Home() {
-  const { gameState, updateGameState, handleSubmit, handleNextLevel, resetGame, messagesEndRef } = useGame()
+  const { gameState, updateGameState, handleSubmit, handleNextLevel, messagesEndRef } = useGame()
 
   const currentLevelData = levels.find((l) => l.id === gameState.currentLevel)!
 
