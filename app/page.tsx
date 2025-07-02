@@ -42,7 +42,7 @@ export default function Home() {
       <GameCompletedModal
         open={gameState.gameCompleted}
         onOpenChange={(open) => updateGameState({ gameCompleted: open })}
-        onReset={resetGame}
+        //onReset={resetGame}
       />
     </div>
   );
